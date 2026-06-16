@@ -276,10 +276,34 @@ function observe() {
   document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 }
 
+// ── Discord copy ──────────────────────────────────────────
+
+function initDiscordCopy() {
+  const btn = document.getElementById('discord-copy');
+  const label = document.getElementById('discord-label');
+  if (!btn || !label) return;
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText('solaerius');
+      label.textContent = 'Copied!';
+      btn.style.borderColor = 'var(--green)';
+      btn.style.color = 'var(--green)';
+      setTimeout(() => {
+        label.textContent = 'solaerius';
+        btn.style.borderColor = '';
+        btn.style.color = '';
+      }, 2000);
+    } catch {
+      label.textContent = 'solaerius';
+    }
+  });
+}
+
 // ── Init ──────────────────────────────────────────────────
 
 loadStatus();
 loadProjects();
 initForm();
 initNav();
+initDiscordCopy();
 observe();
