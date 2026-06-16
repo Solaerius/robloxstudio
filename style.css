@@ -539,18 +539,20 @@ a {
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--text);
-  background: none;
-  border: 1px solid var(--border);
-  padding: 0.6rem 1.1rem;
+  background: var(--bg-subtle);
+  border: 1px solid #3a344f;
+  padding: 0.65rem 1.2rem;
   cursor: pointer;
   text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
   letter-spacing: 0.02em;
+  line-height: 1;
 }
 
 .contact-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
+  background: var(--accent-dim);
 }
 
 .contact-btn svg {
