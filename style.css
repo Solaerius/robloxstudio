@@ -1,3 +1,11 @@
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  display: block;
+}
+
 :root {
   --bg:          #0c0b0f;
   --bg-subtle:   #141218;
