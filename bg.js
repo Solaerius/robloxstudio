@@ -213,6 +213,7 @@ initCanvas();
 let lastTime = 0;
 
 function tick(timestamp) {
+  if (!lastTime) lastTime = timestamp;
   const dt = Math.min((timestamp - lastTime) / 1000, 0.1);
   lastTime = timestamp;
 
