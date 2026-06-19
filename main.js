@@ -249,14 +249,6 @@ function initForm() {
       await db.createDocument(APPWRITE_DATABASE_ID, CONTACT_COLLECTION_ID, ID.unique(), payload);
       form.hidden = true;
       success.hidden = false;
-      // After databases.createDocument() succeeds:
-      fetch(DISCORD_WEBHOOK_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          content: `**New commission inquiry**\n**Name:** ${payload.name}\n**Discord:** ${payload.discord}\n**Type:** ${payload.projectType}\n**Budget:** ${payload.budget}\n**Details:** ${payload.details}`
-        })
-      }).catch(() => {});
     } catch {
       errEl.textContent = 'Something went wrong. Please try again.';
       btn.disabled = false;
