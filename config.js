@@ -5,3 +5,4 @@ export const APPWRITE_DATABASE_ID = 'portfolio';
 export const COMMISSION_COLLECTION_ID = 'commission_status';
 export const CONTACT_COLLECTION_ID = 'contact_submissions';
 export const PROJECTS_COLLECTION_ID = 'projects';
+export const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1517530931706073248/hipYaf3jxXgkmjU6q6nGuIZIxh9SmA4T763ThWXfCI9Bc3ZXRTLfnp_tekySE_tHaaKV';
