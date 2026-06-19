@@ -424,6 +424,8 @@ a {
 .card-code pre {
   margin: 0;
   border-radius: 0;
+  overflow-x: auto;
+  white-space: pre;
 }
 
 .card-code code.hljs {
@@ -431,6 +433,7 @@ a {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   padding: 1.25rem;
+  white-space: pre;
 }
 
 .card-links {

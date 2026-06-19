@@ -148,6 +148,7 @@ function renderCards(projects) {
       ? `<div class="card-media"><iframe src="https://www.youtube.com/embed/${id}" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe></div>`
       : `<div class="card-media"><div class="video-placeholder">No preview</div></div>`;
 
+    const snippet = (p.codeSnippet || '').replace(/\\n/g, '\n');
     const tags = (p.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
 
     const links = [
@@ -167,7 +168,7 @@ function renderCards(projects) {
         <div class="card-tags">${tags}</div>
       </div>
       <div class="card-expanded">
-        <div class="card-code"><pre><code class="language-lua">${escHtml(p.codeSnippet || '')}</code></pre></div>
+        <div class="card-code"><pre><code class="language-lua">${escHtml(snippet)}</code></pre></div>
         ${links ? `<div class="card-links">${links}</div>` : ''}
       </div>`;
 
